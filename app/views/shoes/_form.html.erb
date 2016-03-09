@@ -1,0 +1,20 @@
+<%= simple_form_for(@shoes) do |f| %>
+  <%= f.error_notification %>
+
+<div class="container">
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :size %>
+    <%= f.input :designer %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+   <div class="hidden">
+  <%= f.number_field :user_id, value: current_user.id %>
+  </div>
+  
+<% end %>
+</div>
